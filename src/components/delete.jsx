@@ -5,8 +5,9 @@ const Delete = () => {
     const [data, setData] = useState()
     const [dataId, setId] = useState(null)
 
-    const DeleteData = async ({ id }) => {
-        const resp = await Axios.delete(`/deleteServer/${id}`)
+    const DeleteData = async () => {
+        const resp = await Axios.delete(`/deleteServer/${dataId}`)
+        console.log(resp.data)
         setData(resp.data)
     }
 
@@ -22,4 +23,4 @@ const Delete = () => {
     )
 }
 
-export default Delete
+export default Delete;
