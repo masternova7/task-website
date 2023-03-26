@@ -9,7 +9,7 @@ const Create = () => {
     const [framework, setFrameWork] = useState("")
 
     const CreateRequest = async () => {
-        const resp = await Axios.post('/addServer', {
+        const resp = await Axios.put('/addServer', {
             id: dataId,
             name: name,
             language: language,
